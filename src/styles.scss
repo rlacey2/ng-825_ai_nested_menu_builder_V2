@@ -1,0 +1,31 @@
+/* Add application styles & imports to this file! */
+
+.scroll-y {
+  overflow-y: scroll;
+}
+
+.dvh-100 {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.test {
+  background-color: aquamarine;
+
+}
+
+.font0_625 {
+  font-size: 0.625em;
+}
+
+.font0_5 {
+  font-size: 0.5em;
+}
+
+.overflow-hidden {
+  overflow: hidden
+}
+
+.caret-width {
+  width: 20px; // ensures sibling aligment, if some elements are a leaf
+}

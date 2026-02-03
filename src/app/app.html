@@ -1,0 +1,26 @@
+<div class="p-4">
+  <h3>Angular 21 Recursive Bootstrap Menu</h3>
+
+  <div class="d-flex flex-row">
+ 
+    <div class="w-75">
+ 
+    </div>
+
+  <div class="d-flex flex-row w-25">
+
+    <div class="w-75">
+   
+    </div>
+
+    <div class="w-25"> 
+      <!-- forcing to right -->
+               <nav-menu-display [nodes]="navItems" [state]="state" (leafClick)="onLeafSelected($event)"></nav-menu-display>
+
+     </div>
+
+  </div>
+
+  </div>
+
+</div>

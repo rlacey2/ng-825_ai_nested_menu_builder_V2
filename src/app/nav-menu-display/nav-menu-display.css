@@ -1,0 +1,87 @@
+.dropdown-submenu { position: relative; }
+
+ 
+.dropdown-submenu > nav-menu-display {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 0.25rem;
+}
+
+/* 🔄 Flip left when needed */
+.dropdown-submenu.open-left > nav-menu-display {
+  left: auto;
+  right: 100%;
+  margin-left: 0;
+  margin-right: 0.25rem;
+}
+
+
+
+
+
+:host {
+  display: block;
+  width: max-content;
+  max-width: 100vw;
+}
+
+
+
+
+
+
+
+/* Base menu */
+ul.dropdown-menu {
+  display: inline-block;
+  width: max-content;
+  min-width: unset;          /* override Bootstrap */
+  max-width: 100vw;
+  white-space: nowrap;
+  padding: 0.25rem 0;
+}
+
+/* Menu items */
+.dropdown-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  white-space: nowrap;
+}
+
+/* Allow icons without shrinking text */
+.dropdown-item span {
+  flex-shrink: 0;
+}
+
+/* Submenu container */
+.dropdown-submenu {
+  position: relative;
+  width: max-content;
+}
+
+/* Recursive submenu positioning */
+.dropdown-submenu > nav-menu-display {
+  position: absolute;
+  top: 0;
+  left: 100%;
+  margin-left: 0.25rem;
+
+  width: max-content;
+  max-width: calc(100vw - 1rem);
+}
+
+/* Prevent accidental wrapping on long labels */
+.dropdown-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Optional: viewport safety for very long labels */
+@media (max-width: 768px) {
+  ul.dropdown-menu {
+    max-width: 90vw;
+  }
+}
